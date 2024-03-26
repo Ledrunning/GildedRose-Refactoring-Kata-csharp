@@ -14,72 +14,73 @@ public class GildedRoseService
     {
         for (var i = 0; i < _items.Count; i++)
         {
-            if (_items[i].Name != ProductNames.AgedBrie && _items[i].Name != ProductNames.TAFKAL80ETC)
+            var item = _items[i];
+            if (item.Name != ProductNames.AgedBrie && item.Name != ProductNames.TAFKAL80ETC)
             {
-                if (_items[i].Quality > ServiceConstants.ZeroQuality)
+                if (item.Quality > ServiceConstants.ZeroQuality)
                 {
-                    if (_items[i].Name != ProductNames.SulfurasRagnarosHand)
+                    if (item.Name != ProductNames.SulfurasRagnarosHand)
                     {
-                        _items[i].Quality = _items[i].Quality - 1;
+                        item.Quality = item.Quality - 1;
                     }
                 }
             }
             else
             {
-                if (_items[i].Quality < ServiceConstants.StandardQuality)
+                if (item.Quality < ServiceConstants.MaximumQuality)
                 {
-                    _items[i].Quality = _items[i].Quality + 1;
+                    item.Quality = item.Quality + 1;
 
-                    if (_items[i].Name == ProductNames.TAFKAL80ETC)
+                    if (item.Name == ProductNames.TAFKAL80ETC)
                     {
-                        if (_items[i].SellIn < 11)
+                        if (item.SellIn < ServiceConstants.BackstagePassesThreshold)
                         {
-                            if (_items[i].Quality < 50)
+                            if (item.Quality < ServiceConstants.MaximumQuality)
                             {
-                                _items[i].Quality = _items[i].Quality + 1;
+                                item.Quality = item.Quality + 1;
                             }
                         }
 
-                        if (_items[i].SellIn < ServiceConstants.SellInSixDays)
+                        if (item.SellIn < ServiceConstants.SellInSixDays)
                         {
-                            if (_items[i].Quality < ServiceConstants.StandardQuality)
+                            if (item.Quality < ServiceConstants.MaximumQuality)
                             {
-                                _items[i].Quality = _items[i].Quality + 1;
+                                item.Quality = item.Quality + 1;
                             }
                         }
                     }
                 }
             }
 
-            if (_items[i].Name != ProductNames.SulfurasRagnarosHand)
+            if (item.Name != ProductNames.SulfurasRagnarosHand)
             {
-                _items[i].SellIn = _items[i].SellIn - 1;
+                item.SellIn = item.SellIn - 1;
             }
 
-            if (_items[i].SellIn < 0)
+            if (item.SellIn < ServiceConstants.SellInZeroDay)
             {
-                if (_items[i].Name != ProductNames.AgedBrie)
+                if (item.Name != ProductNames.AgedBrie)
                 {
-                    if (_items[i].Name != ProductNames.TAFKAL80ETC)
+                    if (item.Name != ProductNames.TAFKAL80ETC)
                     {
-                        if (_items[i].Quality > 0)
+                        if (item.Quality > ServiceConstants.ZeroQuality)
                         {
-                            if (_items[i].Name != ProductNames.SulfurasRagnarosHand)
+                            if (item.Name != ProductNames.SulfurasRagnarosHand)
                             {
-                                _items[i].Quality = _items[i].Quality - 1;
+                                item.Quality = item.Quality - 1;
                             }
                         }
                     }
                     else
                     {
-                        _items[i].Quality = _items[i].Quality - _items[i].Quality;
+                        item.Quality = item.Quality - item.Quality;
                     }
                 }
                 else
                 {
-                    if (_items[i].Quality < ServiceConstants.StandardQuality)
+                    if (item.Quality < ServiceConstants.MaximumQuality)
                     {
-                        _items[i].Quality = _items[i].Quality + 1;
+                        item.Quality = item.Quality + 1;
                     }
                 }
             }
