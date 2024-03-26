@@ -39,5 +39,3 @@ jobs:
 
     - name: Restore the application
       run: msbuild ${{ env.Solution_Name }} /t:Restore /p:Configuration=${{ matrix.configuration }}
-
-    # Add other steps for building the application, creating packages, etc.
