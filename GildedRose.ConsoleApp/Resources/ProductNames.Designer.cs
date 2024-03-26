@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GildedRose.ConsoleApp {
+namespace GildedRose.ConsoleApp.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace GildedRose.ConsoleApp {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ProgramMessages {
+    internal class ProductNames {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ProgramMessages() {
+        internal ProductNames() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace GildedRose.ConsoleApp {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GildedRose.ConsoleApp.ProgramMessages", typeof(ProgramMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GildedRose.ConsoleApp.Resources.ProductNames", typeof(ProductNames).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,56 @@ namespace GildedRose.ConsoleApp {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to -------- day {0} --------.
+        ///   Looks up a localized string similar to Aged Brie.
         /// </summary>
-        internal static string DayFormat {
+        internal static string AgedBrie {
             get {
-                return ResourceManager.GetString("DayFormat", resourceCulture);
+                return ResourceManager.GetString("AgedBrie", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to name, sellIn, quality.
+        ///   Looks up a localized string similar to Conjured Mana Cake.
         /// </summary>
-        internal static string ProductProperties {
+        internal static string ConjuredManaCake {
             get {
-                return ResourceManager.GetString("ProductProperties", resourceCulture);
+                return ResourceManager.GetString("ConjuredManaCake", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +5 Dexterity Vest.
+        /// </summary>
+        internal static string DexterityVest {
+            get {
+                return ResourceManager.GetString("DexterityVest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elixir of the Mongoose.
+        /// </summary>
+        internal static string MongooseElixir {
+            get {
+                return ResourceManager.GetString("MongooseElixir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sulfuras, Hand of Ragnaros.
+        /// </summary>
+        internal static string SulfurasRagnarosHand {
+            get {
+                return ResourceManager.GetString("SulfurasRagnarosHand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backstage passes to a TAFKAL80ETC concert.
+        /// </summary>
+        internal static string TAFKAL80ETC {
+            get {
+                return ResourceManager.GetString("TAFKAL80ETC", resourceCulture);
             }
         }
     }

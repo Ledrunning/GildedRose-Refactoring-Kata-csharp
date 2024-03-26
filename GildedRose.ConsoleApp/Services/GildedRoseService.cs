@@ -1,4 +1,6 @@
-﻿using GildedRose.ConsoleApp.Models;
+﻿using GildedRose.ConsoleApp.Constants;
+using GildedRose.ConsoleApp.Models;
+using GildedRose.ConsoleApp.Resources;
 
 namespace GildedRose.ConsoleApp.Services;
 
@@ -15,11 +17,11 @@ public class GildedRoseService
     {
         for (var i = 0; i < _items.Count; i++)
         {
-            if (_items[i].Name != "Aged Brie" && _items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+            if (_items[i].Name != ProductNames.AgedBrie && _items[i].Name != ProductNames.TAFKAL80ETC)
             {
-                if (_items[i].Quality > 0)
+                if (_items[i].Quality > ServiceConstants.ZeroQuality)
                 {
-                    if (_items[i].Name != "Sulfuras, Hand of Ragnaros")
+                    if (_items[i].Name != ProductNames.SulfurasRagnarosHand)
                     {
                         _items[i].Quality = _items[i].Quality - 1;
                     }
@@ -27,11 +29,11 @@ public class GildedRoseService
             }
             else
             {
-                if (_items[i].Quality < 50)
+                if (_items[i].Quality < ServiceConstants.StandardQuality)
                 {
                     _items[i].Quality = _items[i].Quality + 1;
 
-                    if (_items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                    if (_items[i].Name == ProductNames.TAFKAL80ETC)
                     {
                         if (_items[i].SellIn < 11)
                         {
@@ -41,9 +43,9 @@ public class GildedRoseService
                             }
                         }
 
-                        if (_items[i].SellIn < 6)
+                        if (_items[i].SellIn < ServiceConstants.SellInSixDays)
                         {
-                            if (_items[i].Quality < 50)
+                            if (_items[i].Quality < ServiceConstants.StandardQuality)
                             {
                                 _items[i].Quality = _items[i].Quality + 1;
                             }
@@ -52,20 +54,20 @@ public class GildedRoseService
                 }
             }
 
-            if (_items[i].Name != "Sulfuras, Hand of Ragnaros")
+            if (_items[i].Name != ProductNames.SulfurasRagnarosHand)
             {
                 _items[i].SellIn = _items[i].SellIn - 1;
             }
 
             if (_items[i].SellIn < 0)
             {
-                if (_items[i].Name != "Aged Brie")
+                if (_items[i].Name != ProductNames.AgedBrie)
                 {
-                    if (_items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                    if (_items[i].Name != ProductNames.TAFKAL80ETC)
                     {
                         if (_items[i].Quality > 0)
                         {
-                            if (_items[i].Name != "Sulfuras, Hand of Ragnaros")
+                            if (_items[i].Name != ProductNames.SulfurasRagnarosHand)
                             {
                                 _items[i].Quality = _items[i].Quality - 1;
                             }
@@ -78,7 +80,7 @@ public class GildedRoseService
                 }
                 else
                 {
-                    if (_items[i].Quality < 50)
+                    if (_items[i].Quality < ServiceConstants.StandardQuality)
                     {
                         _items[i].Quality = _items[i].Quality + 1;
                     }

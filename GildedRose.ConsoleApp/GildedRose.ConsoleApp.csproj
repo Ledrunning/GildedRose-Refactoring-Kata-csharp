@@ -8,26 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="ProductNames.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
+    <Compile Update="Resources\ProductNames.Designer.cs">
       <DependentUpon>ProductNames.resx</DependentUpon>
-    </Compile>
-    <Compile Update="ProgramMessages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Resources\ProgramMessages.Designer.cs">
       <DependentUpon>ProgramMessages.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ProductNames.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+    <EmbeddedResource Update="Resources\ProductNames.resx">
       <LastGenOutput>ProductNames.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="ProgramMessages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ProgramMessages.resx">
       <LastGenOutput>ProgramMessages.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
   </ItemGroup>
 

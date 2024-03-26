@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GildedRose.ConsoleApp {
+namespace GildedRose.ConsoleApp.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace GildedRose.ConsoleApp {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ProductNames {
+    internal class ProgramMessages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ProductNames() {
+        internal ProgramMessages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace GildedRose.ConsoleApp {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GildedRose.ConsoleApp.ProductNames", typeof(ProductNames).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GildedRose.ConsoleApp.Resources.ProgramMessages", typeof(ProgramMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,56 +61,20 @@ namespace GildedRose.ConsoleApp {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aged Brie.
+        ///   Looks up a localized string similar to -------- day {0} --------.
         /// </summary>
-        internal static string AgedBrie {
+        internal static string DayFormat {
             get {
-                return ResourceManager.GetString("AgedBrie", resourceCulture);
+                return ResourceManager.GetString("DayFormat", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Conjured Mana Cake.
+        ///   Looks up a localized string similar to name, sellIn, quality.
         /// </summary>
-        internal static string ConjuredManaCake {
+        internal static string ProductProperties {
             get {
-                return ResourceManager.GetString("ConjuredManaCake", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to +5 Dexterity Vest.
-        /// </summary>
-        internal static string DexterityVest {
-            get {
-                return ResourceManager.GetString("DexterityVest", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Elixir of the Mongoose.
-        /// </summary>
-        internal static string MongooseElixir {
-            get {
-                return ResourceManager.GetString("MongooseElixir", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sulfuras, Hand of Ragnaros.
-        /// </summary>
-        internal static string SulfurasRagnarosHand {
-            get {
-                return ResourceManager.GetString("SulfurasRagnarosHand", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Backstage passes to a TAFKAL80ETC concert.
-        /// </summary>
-        internal static string TAFKAL80ETC {
-            get {
-                return ResourceManager.GetString("TAFKAL80ETC", resourceCulture);
+                return ResourceManager.GetString("ProductProperties", resourceCulture);
             }
         }
     }

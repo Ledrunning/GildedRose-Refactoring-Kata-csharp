@@ -1,4 +1,5 @@
 ﻿using GildedRose.ConsoleApp.Models;
+using GildedRose.ConsoleApp.Resources;
 using GildedRose.ConsoleApp.Services;
 
 namespace GildedRose.ConsoleApp;
