@@ -1,4 +1,4 @@
-﻿namespace csharp
+﻿namespace GildedRose.ConsoleApp.Model
 {
     public class Item
     {

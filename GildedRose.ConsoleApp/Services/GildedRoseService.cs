@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using GildedRose.ConsoleApp.Model;
 
-namespace csharp
+namespace GildedRose.ConsoleApp.Services
 {
-    public class GildedRose
+    public class GildedRoseService
     {
         IList<Item> Items;
-        public GildedRose(IList<Item> Items)
+        public GildedRoseService(IList<Item> Items)
         {
             this.Items = Items;
         }

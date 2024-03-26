@@ -29,4 +29,7 @@
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
     <PackageReference Include="System.Security.AccessControl" Version="6.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GildedRose.ConsoleApp\GildedRose.ConsoleApp.csproj" />
+  </ItemGroup>
 </Project>
