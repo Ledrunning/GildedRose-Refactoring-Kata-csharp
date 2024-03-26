@@ -120,6 +120,12 @@
   <data name="AgedBrie" xml:space="preserve">
     <value>Aged Brie</value>
   </data>
+  <data name="BackstagePasses" xml:space="preserve">
+    <value>Backstage passes to a TAFKAL80ETC concert</value>
+  </data>
+  <data name="Conjured" xml:space="preserve">
+    <value>Conjured</value>
+  </data>
   <data name="ConjuredManaCake" xml:space="preserve">
     <value>Conjured Mana Cake</value>
   </data>
@@ -131,8 +137,5 @@
   </data>
   <data name="SulfurasRagnarosHand" xml:space="preserve">
     <value>Sulfuras, Hand of Ragnaros</value>
-  </data>
-  <data name="TAFKAL80ETC" xml:space="preserve">
-    <value>Backstage passes to a TAFKAL80ETC concert</value>
   </data>
 </root>

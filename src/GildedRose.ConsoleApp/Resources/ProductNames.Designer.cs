@@ -70,6 +70,24 @@ namespace GildedRose.ConsoleApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Backstage passes to a TAFKAL80ETC concert.
+        /// </summary>
+        internal static string BackstagePasses {
+            get {
+                return ResourceManager.GetString("BackstagePasses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conjured.
+        /// </summary>
+        internal static string Conjured {
+            get {
+                return ResourceManager.GetString("Conjured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Conjured Mana Cake.
         /// </summary>
         internal static string ConjuredManaCake {
@@ -102,15 +120,6 @@ namespace GildedRose.ConsoleApp.Resources {
         internal static string SulfurasRagnarosHand {
             get {
                 return ResourceManager.GetString("SulfurasRagnarosHand", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Backstage passes to a TAFKAL80ETC concert.
-        /// </summary>
-        internal static string BackstagePasses {
-            get {
-                return ResourceManager.GetString("TAFKAL80ETC", resourceCulture);
             }
         }
     }

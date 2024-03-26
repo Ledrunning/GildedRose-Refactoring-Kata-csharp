@@ -1,4 +1,5 @@
-﻿using GildedRose.ConsoleApp.Models;
+﻿using GildedRose.ConsoleApp.Constants;
+using GildedRose.ConsoleApp.Models;
 using GildedRose.ConsoleApp.Resources;
 using GildedRose.ConsoleApp.Services;
 
@@ -15,8 +16,8 @@ public class Program
             new() { Name = ProductNames.DexterityVest, SellIn = 10, Quality = 20 },
             new() { Name = ProductNames.AgedBrie, SellIn = 2, Quality = 0 },
             new() { Name = ProductNames.MongooseElixir, SellIn = 5, Quality = 7 },
-            new() { Name = ProductNames.SulfurasRagnarosHand, SellIn = 0, Quality = 80 },
-            new() { Name = ProductNames.SulfurasRagnarosHand, SellIn = -1, Quality = 80 },
+            new() { Name = ProductNames.SulfurasRagnarosHand, SellIn = 0, Quality = ServiceConstants.SulfurasLegendaryQuality },
+            new() { Name = ProductNames.SulfurasRagnarosHand, SellIn = -1, Quality = ServiceConstants.SulfurasLegendaryQuality },
             new() { Name = ProductNames.BackstagePasses, SellIn = 15, Quality = 20 },
             new() { Name = ProductNames.BackstagePasses, SellIn = 10, Quality = 49 },
             new() { Name = ProductNames.BackstagePasses, SellIn = 5, Quality = 49 },
@@ -26,7 +27,7 @@ public class Program
 
         var gildedRoseService = new GildedRoseService(items);
 
-        for (var i = 0; i < 31; i++)
+        for (var i = 0; i < ProgramConstants.DayInMonth; i++)
         {
             Console.WriteLine(ProgramMessages.DayFormat, i);
             Console.WriteLine(ProgramMessages.ProductProperties);
