@@ -8,18 +8,21 @@ public class GildedRoseService
 {
     private readonly IList<Item> _items;
 
-    public GildedRoseService(IList<Item> items) => _items = items;
+    public GildedRoseService(IList<Item> items)
+    {
+        _items = items;
+    }
 
     public void UpdateQuality()
     {
         for (var i = 0; i < _items.Count; i++)
         {
             var item = _items[i];
-            if (item.Name != ProductNames.AgedBrie && item.Name != ProductNames.TAFKAL80ETC)
+            if (!IsAgedBrie(item) && !IsBackstagePasses(item))
             {
                 if (item.Quality > ServiceConstants.ZeroQuality)
                 {
-                    if (item.Name != ProductNames.SulfurasRagnarosHand)
+                    if (!IsSulfuras(item))
                     {
                         item.Quality = item.Quality - 1;
                     }
@@ -31,7 +34,7 @@ public class GildedRoseService
                 {
                     item.Quality = item.Quality + 1;
 
-                    if (item.Name == ProductNames.TAFKAL80ETC)
+                    if (IsBackstagePasses(item))
                     {
                         if (item.SellIn < ServiceConstants.BackstagePassesThreshold)
                         {
@@ -52,20 +55,20 @@ public class GildedRoseService
                 }
             }
 
-            if (item.Name != ProductNames.SulfurasRagnarosHand)
+            if (!IsSulfuras(item))
             {
                 item.SellIn = item.SellIn - 1;
             }
 
             if (item.SellIn < ServiceConstants.SellInZeroDay)
             {
-                if (item.Name != ProductNames.AgedBrie)
+                if (!IsAgedBrie(item))
                 {
-                    if (item.Name != ProductNames.TAFKAL80ETC)
+                    if (!IsBackstagePasses(item))
                     {
                         if (item.Quality > ServiceConstants.ZeroQuality)
                         {
-                            if (item.Name != ProductNames.SulfurasRagnarosHand)
+                            if (!IsSulfuras(item))
                             {
                                 item.Quality = item.Quality - 1;
                             }
@@ -85,5 +88,20 @@ public class GildedRoseService
                 }
             }
         }
+    }
+
+    private static bool IsSulfuras(Item item)
+    {
+        return item.Name == ProductNames.SulfurasRagnarosHand;
+    }
+
+    private static bool IsBackstagePasses(Item item)
+    {
+        return item.Name == ProductNames.BackstagePasses;
+    }
+
+    private static bool IsAgedBrie(Item item)
+    {
+        return item.Name == ProductNames.AgedBrie;
     }
 }

@@ -108,7 +108,7 @@ namespace GildedRose.ConsoleApp.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Backstage passes to a TAFKAL80ETC concert.
         /// </summary>
-        internal static string TAFKAL80ETC {
+        internal static string BackstagePasses {
             get {
                 return ResourceManager.GetString("TAFKAL80ETC", resourceCulture);
             }

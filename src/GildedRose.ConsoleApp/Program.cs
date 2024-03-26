@@ -17,9 +17,9 @@ public class Program
             new() { Name = ProductNames.MongooseElixir, SellIn = 5, Quality = 7 },
             new() { Name = ProductNames.SulfurasRagnarosHand, SellIn = 0, Quality = 80 },
             new() { Name = ProductNames.SulfurasRagnarosHand, SellIn = -1, Quality = 80 },
-            new() { Name = ProductNames.TAFKAL80ETC, SellIn = 15, Quality = 20 },
-            new() { Name = ProductNames.TAFKAL80ETC, SellIn = 10, Quality = 49 },
-            new() { Name = ProductNames.TAFKAL80ETC, SellIn = 5, Quality = 49 },
+            new() { Name = ProductNames.BackstagePasses, SellIn = 15, Quality = 20 },
+            new() { Name = ProductNames.BackstagePasses, SellIn = 10, Quality = 49 },
+            new() { Name = ProductNames.BackstagePasses, SellIn = 5, Quality = 49 },
             // this conjured item does not work properly yet
             new() { Name = ProductNames.ConjuredManaCake, SellIn = 3, Quality = 6 }
         };
