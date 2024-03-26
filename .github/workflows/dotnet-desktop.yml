@@ -34,7 +34,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Execute unit tests
-      run: dotnet test GildedRoseTestTask/GildedRose.UnitTests/GildedRose.UnitTests.csproj
+      run: dotnet test GildedRose.UnitTests/GildedRose.UnitTests.csproj
 
     - name: Restore the application
       run: msbuild ${{ env.Solution_Name }} /t:Restore /p:Configuration=${{ matrix.configuration }}
