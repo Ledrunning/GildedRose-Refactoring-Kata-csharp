@@ -2,6 +2,8 @@
 
 ## Code refactoring and new features
 
+[![.NET Core Desktop](https://github.com/Ledrunning/GildedRose-Refactoring-Kata-csharp/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/Ledrunning/GildedRose-Refactoring-Kata-csharp/actions/workflows/dotnet-desktop.yml)
+
 ## Architecture
 1. The project is divided into two parts: the main program as a console application and unit tests as a separate project. While it could have been possible to extract the main service and calculation algorithm into a separate library, it seemed a bit excessive in this case.
 2. Both projects are implemented using .NET 8.
