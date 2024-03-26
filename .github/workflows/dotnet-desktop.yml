@@ -17,8 +17,8 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: GildedRoseTestTask/GildedRoseTestTask.sln
-      Test_Project_Path: GildedRoseTestTask/GildedRose.UnitTests/GildedRose.UnitTests.csproj
+      Solution_Name: src/GildedRoseTestTask.sln
+      Test_Project_Path: src/GildedRose.UnitTests/GildedRose.UnitTests.csproj
 
     steps:
     - name: Checkout
