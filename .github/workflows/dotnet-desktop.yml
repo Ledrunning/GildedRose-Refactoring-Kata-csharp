@@ -18,7 +18,6 @@ jobs:
 
     env:
       Solution_Name: GildedRoseTestTask/GildedRoseTestTask.sln
-      Test_Project_Path: GildedRoseTestTask/GildedRose.UnitTests/GildedRose.UnitTests.csproj
 
     steps:
     - name: Checkout
@@ -35,7 +34,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Execute unit tests
-      run: dotnet test ${{ env.Test_Project_Path }}
+      run: dotnet test GildedRoseTestTask/GildedRose.UnitTests/GildedRose.UnitTests.csproj
 
     - name: Restore the application
       run: msbuild ${{ env.Solution_Name }} /t:Restore /p:Configuration=${{ matrix.configuration }}
