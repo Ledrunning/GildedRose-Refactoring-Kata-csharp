@@ -56,7 +56,8 @@ public class GildedRoseService : IGildedRoseService
             item.Quality++;
         }
 
-        if (item.SellIn <= 0 && item.Quality < ServiceConstants.MaximumQuality)
+        if (item.SellIn <= ServiceConstants.SellInZeroDay
+            && item.Quality < ServiceConstants.MaximumQuality)
         {
             item.Quality++;
         }
@@ -77,7 +78,7 @@ public class GildedRoseService : IGildedRoseService
             }
         }
 
-        if (item.SellIn <= 0)
+        if (item.SellIn <= ServiceConstants.SellInZeroDay)
         {
             item.Quality = 0;
         }
