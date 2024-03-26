@@ -1,7 +1,7 @@
-﻿using NUnit.Framework;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using NUnit.Framework;
 
-namespace csharp
+namespace GildedRose.UnitTests
 {
     [TestFixture]
     public class GildedRoseTest

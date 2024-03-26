@@ -8,10 +8,7 @@ public class GildedRoseService
 {
     private readonly IList<Item> _items;
 
-    public GildedRoseService(IList<Item> items)
-    {
-        _items = items;
-    }
+    public GildedRoseService(IList<Item> items) => _items = items;
 
     public void UpdateQuality()
     {
