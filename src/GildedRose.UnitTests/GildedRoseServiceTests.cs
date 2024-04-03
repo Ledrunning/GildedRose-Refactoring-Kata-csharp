@@ -32,7 +32,7 @@ public class Tests
         Assert.That(items.Quality, Is.EqualTo(24));
     }
 
-    // Once the sell by date has passed, Quality degrades twice as fast
+    // Once the sell by date has passed, Quality degrades twice as fast 25 - 2
     [Test]
     public void UpdateQuality_PastSellInAndQuality_DegradesTwiceAsFast()
     {
@@ -47,7 +47,7 @@ public class Tests
         Assert.AreEqual(23, items.Quality);
     }
 
-    // The Quality of an item is never negative
+    // The Quality of an item is never negative - can not decrease
     [Test]
     public void UpdateQuality_ItemQuality_IsNeverNegative()
     {
@@ -63,7 +63,7 @@ public class Tests
     }
 
     // "Aged Brie" actually increases in Quality the older it gets
-
+    // For the Aged Brie product, quality increases in proportion to sell in days;
     [Test]
     public void UpdateQuality_AgedBrie_QualityIncreases()
     {
@@ -153,6 +153,7 @@ public class Tests
         Assert.AreEqual(28, items.Quality);
     }
 
+    // "Conjured" goods lose quality twice as fast as conventional goods.
     [Test]
     public void UpdateQuality_ConjuredItems_QualityDecreaseTwiceAsFast()
     {
