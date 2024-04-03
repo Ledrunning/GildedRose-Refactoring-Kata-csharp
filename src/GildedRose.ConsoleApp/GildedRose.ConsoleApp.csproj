@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <Folder Include="Contracts\" />
+    <Folder Include="Strategy\" />
   </ItemGroup>
 
 </Project>
